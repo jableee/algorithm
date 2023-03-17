@@ -33,3 +33,15 @@ function solution(lottos, win_nums) {
     
     return answer;
 }
+// 다른 사람의 풀이
+// function solution(lottos, win_nums) {
+//     const rank = [6, 6, 5, 4, 3, 2, 1];
+
+//     let minCount = lottos.filter(v => win_nums.includes(v)).length;
+//     let zeroCount = lottos.filter(v => !v).length;
+
+//     const maxCount = minCount + zeroCount;
+
+//     return [rank[maxCount], rank[minCount]];
+// }
+// 내가 생각한 핵심 : 맞춘 숫자의 갯수와 0의 갯수를 알수 있다. 이를 이용해 rank array를 생각하면 index를 통해 rank배열에서 등수정보를 가져올수 있다
